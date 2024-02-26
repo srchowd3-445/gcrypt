@@ -1,0 +1,90 @@
+body {
+    --nav-width: 200px;
+    margin: 0 0 0 var(--nav-width);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    background-color: #121212; /* Dark background for the body */
+    color: #e0e0e0; /* Lighter text color for better readability */
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav-width);
+    height: 100vh;
+    background: #333333; /* Darker shade for the sidebar */
+}
+
+.nav__link {
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #cccccc; /* Light grey text color for links */
+    font-weight: 500;
+}
+
+.nav__link:hover {
+    background: rgba(255, 255, 255, 0.1); /* Lighter background on hover */
+}
+
+#app {
+    margin: 2em;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+a {
+    color: #4db6ac; /* Adjusting link colors to fit the night mode theme */
+}
+
+button {
+    background-color: #424242; /* Darker background for buttons */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #616161; /* Slightly lighter grey for button hover */
+    color: #dddddd;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.pulsing {
+    animation: pulse 2s infinite;
+}
+
+#my-image {
+    animation-name: fadeIn;
+    animation-duration: 1s; /* Adjust time as needed */
+    animation-fill-mode: both; /* Keeps the element in the final state of the animation */
+}
